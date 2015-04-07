@@ -15,13 +15,12 @@ compile:
     "PATH": "%{install_base}/clang.%{version}/bin:/usr/bin"
     "CPATH": "%{install_base}/clang.%{version}/include/c++/v1"
   allowed_command_line:
-    "-std=": { default: [ "c++11" ], select: [ "c++1z", "gnu++1z", "c++1y", "gnu++1y", "c++11", "gnu++11", "c++98", "gnu++98" ] }
+    "-std=": { default: [ "c++11" ], select: [ "c++11", "gnu++11", "c++98", "gnu++98" ] }
     "-ftemplate-depth=": { select: [ "512", "1024", "2048", "4096" ] }
     "-O": { default: [ "2" ], select: [ "0", "1", "2", "3" ] }
     "-W": { default: [ "all", "extra" ], select: [ "all", "extra", "error", "everything" ] }
     "-E": null
     "-P": null
-    "-faltivec": null
     "-fblocks": null
     "-fborland-extensions": null
     "-fcxx-exceptions": null
@@ -33,8 +32,7 @@ compile:
     "-fgnu-keywords": null
     "-fgnu89-inline": null
     "-fmath-errno": null
-    "-fmax-type-align=": { select: [ "64", "128", "256", "512", "1024" ] }
-    "-fno-elide-types": null
+    "-fno-elide-type": null
     "-fno-math-builtin": null
     "-fno-reroll-loops": null
     "-fno-rtti": null
@@ -42,22 +40,19 @@ compile:
     "-fno-show-source-location": null
     "-fno-signed-char": null
     "-fno-signed-zeros": null
-    "-fno-trigraphs": null
     "-funroll-loops": null
-    "-fpcc-struct-return": null
-    "-freg-strutc-return": null
     "-freroll-loops": null
     "-fshort-enums": null
     "-fslp-vectorize-aggressive": null
     "-fslp-vectorize": null
-    "-fstack-protector": { select: [ "", "-strong", "-all" ] }
+    "-fstack-protector": { select: [ "", "-all" ] }
     "-fstrict-enums": null
     "-fvectorize": null
     "-g": null
     "-H": null
     "-w": null
     "-pedantic": null
-    "-pedantic-erros": null
+    "-pedantic-errors": null
     "-ftime-report": null
     "-v": null
   fixed_command_line:

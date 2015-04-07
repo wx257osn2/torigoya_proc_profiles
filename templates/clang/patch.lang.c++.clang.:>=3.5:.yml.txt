@@ -1,0 +1,10 @@
+# add some options for clang 3.5 and later
+
+update:
+  null
+
+push_back:
+  compile:
+    allowed_command_line:
+      "-std=": { select: [ "c++1z", "gnu++1z", "c++14", "gnu++14" ] }
+      "-fstack-protector": { select: [ "-strong" ] }
