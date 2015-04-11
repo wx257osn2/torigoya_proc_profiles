@@ -51,8 +51,7 @@ compile:
     "-g": null
     "-H": null
     "-w": null
-    "-pedantic": null
-    "-pedantic-errors": null
+    "-pedantic": { select: [ "", "-errors" ] }
     "-ftime-report": null
     "-v": null
   fixed_command_line:

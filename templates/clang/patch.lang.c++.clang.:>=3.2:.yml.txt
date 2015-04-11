@@ -1,6 +1,6 @@
 # add some options for clang 3.2 and later
 
-update:
+overwrite:
   null
 
 push_back:
