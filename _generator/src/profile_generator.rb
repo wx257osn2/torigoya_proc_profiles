@@ -121,8 +121,8 @@ module Torigoya
                 next unless applicable
 
                 pt_replace_hash = pt['replace_hash']
-                pt_replace_hash['target_name'] = holder.tag.name
-                pt_replace_hash['target_version'] = holder.tag.version
+                pt_replace_hash[:target_name] = holder.tag.name
+                pt_replace_hash[:target_version] = holder.tag.version
                 pt_data = YAML.load(pt['data'] % pt_replace_hash)
                 unless pt_data['overwrite'].nil?
                   value_overwrite( nil, data, pt_data['overwrite'] )
