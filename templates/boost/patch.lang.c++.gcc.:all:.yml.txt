@@ -6,4 +6,8 @@ update:
 push_back:
   compile:
     allowed_command_line:
-      "-I": { select: [ "%{install_base}/boost.%{version}/include" ] }
+      "-I": { select: [ "%{install_base}/boost.%{version}/%{target_name}.%{target_version}/include" ] }
+  link:
+    allowed_command_line:
+      "-L": { select: [ "%{install_base}/boost.%{version}/%{target_name}.%{target_version}/lib" ] }
+      "-l": { select: [ "", "" ] }
